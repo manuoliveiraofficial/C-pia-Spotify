@@ -1,24 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import MyButton from './myButton';
-import MyText from './myText';
-import MyInput from './myInput';
-import MyImage from './myImage';
+import { StyleSheet, View } from 'react-native';
+import button from './src/components/button';
+import Texto from './src/components/texto';
+import input from './src/components/input';
+import Imagem from './src/components/imagem';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <MyImage style={styles.logo}></MyImage>
+      <Imagem style={styles.logo} source={require('./assets/spotify-logo.png')}></Imagem>
       <View style={styles.title}> 
-        <MyText text="Milhões de músicas à sua escolha." style={styles.textStyle}></MyText>
-        <MyText text="Grátis no Spotify." style={styles.textStyle}></MyText>
+        <Texto text="Milhões de músicas à sua escolha." style={styles.TextoStyle}></Texto>
+        <Texto text="Grátis no Spotify." style={styles.TextoStyle}></Texto>
       </View>
 
       <View style={styles.button}>
-        <MyText text="Inscreva-se grátis" style={styles.textStyle2}></MyText>
+        <Texto text="Inscreva-se grátis" style={styles.TextoStyle2}></Texto>
       </View>
       <View style={styles.button2}>
-        <MyText text="Entrar" style={styles.textStyle3}></MyText>
+        <Texto text="Entrar" style={styles.TextoStyle3}></Texto>
       </View>
       <StatusBar style="auto" />
     </View>
@@ -26,19 +26,19 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  textStyle: {
+  TextoStyle: {
     color: "white",
     fontSize: "16px",
     margin: "2px",
     fontWeight: "bolder"
   },
-  textStyle2: {
+  TextoStyle2: {
     color: "black",
     fontSize: "14px",
     margin: "10px",
     fontWeight: "bolder"
   },
-  textStyle3: {
+  TextoStyle3: {
     color: "white",
     fontSize: "14px",
     margin: "10px",

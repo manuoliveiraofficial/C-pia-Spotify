@@ -1,10 +1,10 @@
 import { Image } from 'react-native';
 
-export default function MyImage(props) {
+export default function Imagem(props) {
   return (
     <Image
       style={props.style}
-      source={require('./logo.png')}
+      source={props.source}
     />
   );
 }
