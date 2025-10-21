@@ -17,7 +17,7 @@ export default function SegundaPagina() {
       </View>
       <View style={styles.button2}>
         <Imagem style={styles.icon} source={require('../../assets/celular-logo.png')}></Imagem>
-        <Texto text="Continuar com o número de telefone" style={styles.TextoStyle3}></Texto>
+        <Texto text="Continuar com o número de telefone" style={styles.TextoStyle5}></Texto>
       </View>
       <View style={styles.button2}>
         <Imagem style={styles.icon} source={require('../../assets/google-logo.png')}></Imagem>
@@ -37,28 +37,35 @@ export default function SegundaPagina() {
 const styles = StyleSheet.create({
   TextoStyle: {
     color: "white",
-    fontSize: "30px",
-    margin: "2px",
-    fontWeight: "bolder"
+    fontSize: 30, 
+    margin: 2,   
+    fontWeight: "bold" 
   },
   TextoStyle2: {
     color: "black",
-    fontSize: "13px",
-    margin: "10px",
-    fontWeight: "bolder"
+    fontSize: 13, 
+    margin: 10,
+    fontWeight: "bold"
   },
-  TextoStyle3: {
-    color: "white",
-    fontSize: "13px",
-    margin: "30px",
-    fontWeight: "bolder",
-    textAlign: "center"
-  },
+TextoStyle3: {
+  color: "white",
+  fontSize: 13,
+  fontWeight: "bold",
+  textAlign: "center",
+},
   TextoStyle4: {
     color: "white",
-    fontSize: "13px",
-    margin: "15px",
+    fontSize: 13, 
+    margin: 15,   
   },
+  TextoStyle5: {
+  color: "white",
+  fontSize: 13,
+  fontWeight: "bold",
+  textAlign: "center",
+  marginLeft: "30",
+  marginRight: "30"
+},
   container: {
     flex: 1,
     backgroundColor: 'black',
@@ -67,49 +74,47 @@ const styles = StyleSheet.create({
   },
   input: {
     color: "grey",
-    fontSize: "20",
-    padding: "5",
-    margin: "30px"
+    fontSize: 20,
+    padding: 5,  
+    margin: 30    
   },
   button: {
     position: "relative",
     alignItems: "center",
+    justifyContent: "center", 
     backgroundColor: "#1bc258",
-    borderRadius: "40px",
-    height: "40px",
-    width: "260px",
-    marginTop:"100px"
+    borderRadius: 40, 
+    height: 40,      
+    width: 260,       
+    marginTop: 100    
   },
-
   button2: {
     position: "relative",
-    alignItems: "center",
-    justifyContent:"center",
+    justifyContent: "center",
     backgroundColor: "#000000ff",
-    borderRadius: "40px",
-    border: "1px solid white",
-    height: "40px",
-    width: "260px",
-    marginTop: "5px", 
-    textAlign: "center"
+    borderRadius: 40, 
+    borderWidth: 1, 
+    borderColor: "white",
+    height: 40,
+    width: 260, 
+    marginTop: 5, 
   },
   logo: {
-    width: "70px",
-    height: "70px",
-    marginBottom:"20px",
-    marginTop: "100px"
+    width: 70,
+    height: 70,
+    marginBottom: 20,
+    marginTop: 100   
   },
   title: {
     justifyContent: "center",
     alignItems: "center",
-    width:"90%"
+    width: '90%'
   },
   icon: {
     position: "absolute",
-    top: "25%",
-    left: "6%",
-    width: "20px",
-    height: "20px",
+    top: '25%', 
+    left: '6%', 
+    width: 20, 
+    height: 20, 
   }
 });
-
