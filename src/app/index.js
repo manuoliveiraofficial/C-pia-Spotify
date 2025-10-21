@@ -2,6 +2,7 @@ import { registerRootComponent } from 'expo';
 
 import PaginaInicial from '../screens/paginaInicial';
 import SegundaPagina from '../screens/segundaPagina';
+import LoginPage from '../screens/LoginPage';
 
 // registerRootComponent(PaginaInicial);
-registerRootComponent(SegundaPagina);
+registerRootComponent(LoginPage);
