@@ -1,14 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
-import button from './src/components/button';
-import Texto from './src/components/texto';
-import input from './src/components/input';
-import Imagem from './src/components/imagem';
+import Texto from '../components/texto';
+import Imagem from '../components/imagem';
 
-export default function App() {
+export default function PaginaInicial() {
   return (
     <View style={styles.container}>
-      <Imagem style={styles.logo} source={require('./assets/spotify-logo.png')}></Imagem>
+      <Imagem style={styles.logo} source={require('../../assets/spotify-logo.png')}></Imagem>
       <View style={styles.title}> 
         <Texto text="Milhões de músicas à sua escolha." style={styles.TextoStyle}></Texto>
         <Texto text="Grátis no Spotify." style={styles.TextoStyle}></Texto>
