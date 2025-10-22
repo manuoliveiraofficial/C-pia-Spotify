@@ -9,26 +9,24 @@ import {
   Image,
   StatusBar
 } from 'react-native';
-// Ícones do Expo
+
 import {  Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
-// --- CORES PADRÃO SPOTIFY (Dark Mode) ---
 const COLORS = {
   black: '#000000',
-  darkGray: '#121212', // Fundo principal
+  darkGray: '#121212', 
   mediumGray: '#282828',
-  lightGray: '#B3B3B3', // Texto secundário (cinza claro)
+  lightGray: '#B3B3B3', 
   white: '#FFFFFF',
-  purple: '#B0AAEF', // Cor roxa clara do botão Universitário
+  purple: '#B0AAEF', 
 };
 
-// --- DADOS DE EXEMPLO ---
+
 const USER_DATA = {
   name: 'Yaslisboa',
   subtitle: 'Ver perfil',
 };
 
-// --- FUNÇÃO DE ITEM DE MENU REUTILIZÁVEL ---
 const MenuItem = ({ icon, label, action, hasPremiumButton = false, isLast = false, color = COLORS.white }) => (
   <TouchableOpacity 
     style={[styles.menuItem, isLast && { marginBottom: 30 }]} 
@@ -52,14 +50,13 @@ const MenuItem = ({ icon, label, action, hasPremiumButton = false, isLast = fals
   </TouchableOpacity>
 );
 
-// --- COMPONENTE PRINCIPAL (SettingsMenuScreen) ---
+
 export default function SettingsMenuScreen() {
     
     const handleAction = (item) => {
         alert(`Ação de: ${item}`);
     };
     
-    // Simulação da foto de perfil (usando ícone)
     const ProfileIcon = () => (
         <Ionicons name="person-circle-sharp" size={60} color={COLORS.lightGray} />
     );
@@ -79,7 +76,6 @@ export default function SettingsMenuScreen() {
                     </View>
                 </View>
 
-                {/* 2. ITENS PRINCIPAIS DE NAVEGAÇÃO */}
                 <View style={styles.menuList}>
                     <MenuItem 
                         icon="plus-circle-outline" 
@@ -94,12 +90,12 @@ export default function SettingsMenuScreen() {
                         hasPremiumButton={true}
                     />
                     <MenuItem 
-                        icon="flash-outline" // Ícone parecido com o raio/novidades
+                        icon="flash-outline" 
                         label="Novidades" 
                         action={() => handleAction('Novidades')}
                     />
                     <MenuItem 
-                        icon="chart-timeline-variant" // Ícone que representa gráfico/tempo
+                        icon="chart-timeline-variant" 
                         label="Sua Máquina do Tempo" 
                         action={() => handleAction('Sua Máquina do Tempo')}
                     />
@@ -112,7 +108,7 @@ export default function SettingsMenuScreen() {
                         icon="cog-outline" 
                         label="Configurações e privacidade" 
                         action={() => handleAction('Configurações e privacidade')}
-                        isLast={true} // Adiciona margem inferior
+                        isLast={true} 
                     />
                 </View>
                 
@@ -140,7 +136,6 @@ export default function SettingsMenuScreen() {
     );
 }
 
-// --- ESTILOS EXATOS ---
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
@@ -158,7 +153,7 @@ const styles = StyleSheet.create({
     paddingTop: 30,
     paddingBottom: 25,
     borderBottomWidth: 1,
-    borderBottomColor: COLORS.darkGray, // Cor da linha de separação
+    borderBottomColor: COLORS.darkGray, 
   },
   profileTextContainer: {
     marginLeft: 15,
@@ -186,13 +181,13 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
   },
   menuIcon: {
-    width: 30, // Garante que todos os ícones fiquem alinhados
+    width: 30, 
     alignItems: 'center',
   },
   menuLabel: {
     color: COLORS.white,
     fontSize: 16,
-    flex: 1, // Permite que a label empurre o botão para a direita
+    flex: 1, 
     marginLeft: 15,
   },
   premiumButton: {
